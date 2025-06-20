@@ -10,13 +10,14 @@ Utilizando um modelo de Regressão Linear Múltipla, a análise concluiu que **o
 ## 2. Fonte dos Dados
 Os dados utilizados neste projeto foram extraídos do conjunto de microdados do Sistema de Informações sobre Nascidos Vivos (SINASC), disponibilizados publicamente pela plataforma [Base dos Dados](https://basedosdados.org/).
 
-Conjunto de Dados: br_ms_sinasc.microdados
-Período Analisado: Nascimentos ocorridos a partir de 01 de janeiro de 2023 até 01 de novembro de 2023.
-Query de Extração: A query SQL utilizada para a coleta dos dados pode ser encontrada no início do notebook do projeto (Projeto_Peso.ipynb).
-3. Metodologia e Análise
+- **Conjunto de Dados:** *br_ms_sinasc.microdados*
+- **Período Analisado:** Nascimentos ocorridos a partir de 01 de janeiro de 2023 até 01 de novembro de 2023.
+- **Query de Extração:** A query SQL utilizada para a coleta dos dados pode ser encontrada no início do notebook do projeto (*Projeto_Peso.ipynb*).
+
+## 3. Metodologia e Análise
 O projeto seguiu um fluxo de trabalho padrão de ciência de dados, desde a limpeza e tratamento dos dados até a modelagem e interpretação dos resultados.
 
-3.1. Limpeza e Pré-processamento dos Dados
+### 3.1. Limpeza e Pré-processamento dos Dados
 A fase inicial focou em garantir a qualidade e a integridade do dataset:
 
 Tratamento de Valores Ausentes: Identificou-se que a maior perda de dados seria de ~2.6%. Como essa porcentagem é baixa, a estratégia de remoção completa das linhas com valores ausentes (dropna()) foi adotada por ser simples e eficaz.
