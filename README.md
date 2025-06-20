@@ -43,9 +43,10 @@ O modelo de Regressão Linear para prever o peso apresentou resultados significa
 - **Performance Geral:** O modelo final alcançou um **R-quadrado de 0.313**, indicando que **31.3%** da variação no peso dos bebês é explicada pelas variáveis do modelo. O teste F com *Prob (F-statistic): 0.00* confirma que o resultado é altamente significativo.
 - **Análise de Influência dos Fatores:** A análise dos coeficientes do modelo permitiu quantificar o impacto de cada variável. Todos os fatores selecionados se mostraram estatisticamente significativos (*P>|t|* = 0.000).
 
-Fator (Variável)	Coeficiente (Impacto em gramas)	Direção do Impacto
-semana_gestacao	+305.19 g	Positivo (Muito Forte)
-quantidade_parto_cesareo	+32.86 g	Positivo (Moderado)
-pre_natal	+28.36 g	Positivo (Moderado)
-idade_mae	+23.44 g	Positivo (Moderado)
-quantidade_filhos_mortos	-7.41 g	Negativo (Leve)
+| Fator (Variável) | Coeficiente (Impacto em gramas) | Direção do Impacto |
+| :--- | :---: | ---: |
+| semana_gestacao | +305.19 g | Positivo (Muito Forte) |
+| quantidade_parto_cesareo | +32.86 g | Positivo (Moderado) |
+| pre_natal | +28.36 g | Positivo (Moderado) |
+| idade_mae | +23.44 g | Positivo (Moderado) |
+| quantidade_filhos_mortos | -7.41 g | Negativo (Leve) |
