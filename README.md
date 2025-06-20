@@ -1,5 +1,6 @@
-Análise Preditiva dos Fatores que Influenciam o Peso de Recém-Nascidos
-1. Visão Geral do Projeto
+# Análise Preditiva dos Fatores que Influenciam o Peso de Recém-Nascidos
+
+## 1. Visão Geral do Projeto
 Este projeto de ciência de dados realiza uma análise investigativa sobre os microdados de nascimentos no Brasil para identificar os principais fatores que influenciam a saúde de um recém-nascido.
 
 Inicialmente, o projeto buscou prever o índice Apgar, uma medida de vitalidade do bebê. No entanto, a análise demonstrou que o Apgar possui baixa previsibilidade com os dados disponíveis. Diante disso, o projeto foi pivotado com sucesso para um novo objetivo: determinar quais fatores demográficos e de pré-natal melhor explicam o peso do bebê ao nascer.
