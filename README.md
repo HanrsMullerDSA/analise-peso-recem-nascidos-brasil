@@ -20,26 +20,28 @@ O projeto seguiu um fluxo de trabalho padrão de ciência de dados, desde a limp
 ### 3.1. Limpeza e Pré-processamento dos Dados
 A fase inicial focou em garantir a qualidade e a integridade do dataset:
 
-Tratamento de Valores Ausentes: Identificou-se que a maior perda de dados seria de ~2.6%. Como essa porcentagem é baixa, a estratégia de remoção completa das linhas com valores ausentes (dropna()) foi adotada por ser simples e eficaz.
-Tratamento de Códigos Especiais: Foi observado que o valor 99 aparecia como máximo em diversas colunas (ex: pre_natal, gestacoes_ant). Este padrão, comum em datasets públicos, representa dados ignorados ou não informados. As linhas contendo esses códigos foram removidas.
-Tratamento de Outliers: Valores clinicamente implausíveis (ex: quantidade_parto_normal > 15) foram identificados e removidos, com base em dados demográficos sobre a taxa de fecundidade no Brasil.
-3.2. Análise Exploratória de Dados (EDA)
+- **Tratamento de Valores Ausentes:** Identificou-se que a maior perda de dados seria de ~2.6%. Como essa porcentagem é baixa, a estratégia de remoção completa das linhas com valores ausentes (*dropna()*) foi adotada por ser simples e eficaz.
+- **Tratamento de Códigos Especiais:** Foi observado que o valor *99* aparecia como máximo em diversas colunas (ex: *pre_natal*, *gestacoes_ant*). Este padrão, comum em datasets públicos, representa dados ignorados ou não informados. As linhas contendo esses códigos foram removidas.
+- **Tratamento de Outliers:** Valores clinicamente implausíveis (ex: *quantidade_parto_normal > 15*) foram identificados e removidos, com base em dados demográficos sobre a taxa de fecundidade no Brasil.
+
+### 3.2. Análise Exploratória de Dados (EDA)
 A EDA revelou insights cruciais que guiaram a modelagem:
 
-A variável alvo, peso, apresentou uma distribuição aproximadamente normal, adequada para a modelagem com regressão linear.
-A análise de correlação (tanto de Pearson quanto de Spearman) identificou a semana_gestacao como o fator com a mais forte relação com o peso.
-Foi detectada multicolinearidade alta (>0.75) entre as variáveis gestacoes_ant, quantidade_filhos_vivos e quantidade_parto_normal, indicando redundância. Por isso, apenas as variáveis independentes foram selecionadas para o modelo final.
-3.3. Modelagem Estatística
+- A variável alvo, *peso*, apresentou uma distribuição aproximadamente normal, adequada para a modelagem com regressão linear.
+- A análise de correlação identificou a *semana_gestacao* como o fator com a mais forte relação com o *peso*.
+- Foi detectada multicolinearidade alta (>0.75) entre as variáveis *gestacoes_ant*, *quantidade_filhos_vivos* e *quantidade_parto_normal*, indicando redundância. Por isso, apenas as variáveis independentes foram selecionadas para o modelo final.
+
+### 3.3. Modelagem Estatística
 O notebook documenta a jornada completa da modelagem:
 
-Primeira Abordagem (Pivot): Uma tentativa inicial de prever o índice Apgar com modelos de regressão e classificação (Random Forest) resultou em baixo poder preditivo (R² ≈ 6% e recall ≈ 10%), concluindo-se que o sinal nos dados era muito fraco para esta finalidade.
-Segunda Abordagem (Bem-sucedida): O foco foi ajustado para prever a variável peso. Foi construído um modelo de Regressão Linear Múltipla (OLS) para identificar a influência de cada fator. Os dados foram padronizados (StandardScaler) para permitir a comparação direta da magnitude dos coeficientes.
-4. Resultados
+- **Primeira Abordagem (Pivot):** Uma tentativa inicial de prever o índice Apgar com modelos de regressão e classificação (Random Forest) resultou em baixo poder preditivo (*R² ≈ 6%* e *recall ≈ 10%*), concluindo-se que o sinal nos dados era muito fraco para esta finalidade.
+- **Segunda Abordagem (Bem-sucedida):** O foco foi ajustado para prever a variável *peso*. Foi construído um modelo de Regressão Linear Múltipla (OLS) para identificar a influência de cada fator. Os dados foram padronizados (*StandardScaler*) para permitir a comparação direta da magnitude dos coeficientes.
+
+## 4. Resultados
 O modelo de Regressão Linear para prever o peso apresentou resultados significativos e interpretáveis.
 
-Performance Geral: O modelo final alcançou um R-quadrado de 0.313, indicando que 31.3% da variação no peso dos bebês é explicada pelas variáveis do modelo. O teste F com Prob (F-statistic): 0.00 confirma que o resultado é altamente significativo.
-
-Análise de Influência dos Fatores: A análise dos coeficientes do modelo permitiu quantificar o impacto de cada variável. Todos os fatores selecionados se mostraram estatisticamente significativos (P>|t| = 0.000).
+- **Performance Geral:** O modelo final alcançou um **R-quadrado de 0.313**, indicando que **31.3%** da variação no peso dos bebês é explicada pelas variáveis do modelo. O teste F com *Prob (F-statistic): 0.00* confirma que o resultado é altamente significativo.
+- **Análise de Influência dos Fatores:** A análise dos coeficientes do modelo permitiu quantificar o impacto de cada variável. Todos os fatores selecionados se mostraram estatisticamente significativos (*P>|t|* = 0.000).
 
 Fator (Variável)	Coeficiente (Impacto em gramas)	Direção do Impacto
 semana_gestacao	+305.19 g	Positivo (Muito Forte)
