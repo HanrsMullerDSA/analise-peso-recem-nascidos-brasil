@@ -68,3 +68,9 @@ A análise também ressalta a importância da iteração no processo de ciência
 - Hanrs Muller Lima da Silveira
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/hanrsmuller/)
 - GitHub: [github](https://github.com/HanrsMullerDSA/)
+
+## Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorias ou novas funcionalidades.
+
+## Licença
+Este projeto está sob a licença [MIT](LICENSE). Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
