@@ -50,3 +50,21 @@ O modelo de Regressão Linear para prever o peso apresentou resultados significa
 | pre_natal | +28.36 g | Positivo (Moderado) |
 | idade_mae | +23.44 g | Positivo (Moderado) |
 | quantidade_filhos_mortos | -7.41 g | Negativo (Leve) |
+
+## 5. Conclusão
+Este projeto demonstrou com sucesso a aplicação de uma metodologia de ciência de dados para responder à pergunta: "Quais fatores influenciam o peso do bebê?".
+
+A conclusão principal é que **a semana de gestação é o fator predominante**, com cada semana adicional representando um aumento médio de mais de 300 gramas no peso. Fatores como o número de consultas pré-natal, o histórico de cesáreas e a idade da mãe também mostraram uma influência positiva e significativa.
+
+A análise também ressalta a importância da iteração no processo de ciência de dados. A incapacidade de prever o Apgar não foi um fracasso, mas uma descoberta que levou a uma pergunta de pesquisa mais viável e a um modelo final robusto e com conclusões claras.
+
+## 6. Tecnologias Utilizadas
+- **Linguagem:** Python 3
+- **Bibliotecas Principais:** Pandas, NumPy, Matplotlib, Seaborn, Statsmodels, Scikit-learn
+- **Ambiente:** Google Colab
+- **Fonte de Dados:** [Base dos Dados](https://basedosdados.org/)
+
+## 7. Autor
+- Hanrs Muller Lima da Silveira
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hanrsmuller/)
+- GitHub: [github](https://github.com/HanrsMullerDSA/)
