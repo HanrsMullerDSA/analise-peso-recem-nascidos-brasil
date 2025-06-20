@@ -3,15 +3,15 @@
 ## 1. Visão Geral do Projeto
 Este projeto de ciência de dados realiza uma análise investigativa sobre os microdados de nascimentos no Brasil para identificar os principais fatores que influenciam a saúde de um recém-nascido.
 
-Inicialmente, o projeto buscou prever o índice Apgar, uma medida de vitalidade do bebê. No entanto, a análise demonstrou que o Apgar possui baixa previsibilidade com os dados disponíveis. Diante disso, o projeto foi pivotado com sucesso para um novo objetivo: determinar quais fatores demográficos e de pré-natal melhor explicam o peso do bebê ao nascer.
+Inicialmente, o projeto buscou prever o índice Apgar, uma medida de vitalidade do bebê. No entanto, a análise demonstrou que o Apgar possui baixa previsibilidade com os dados disponíveis. Diante disso, o projeto foi pivotado com sucesso para um novo objetivo: **determinar quais fatores demográficos e de pré-natal melhor explicam o peso do bebê ao nascer**.
 
-Utilizando um modelo de Regressão Linear Múltipla, a análise concluiu que o peso ao nascer pode ser explicado com sucesso moderado (R² = 31,3%), com a semana de gestação sendo o fator de impacto predominante.
+Utilizando um modelo de Regressão Linear Múltipla, a análise concluiu que **o peso ao nascer pode ser explicado com sucesso moderado (R² = 31,3%)**, com a **semana de gestação** sendo o fator de impacto predominante.
 
-2. Fonte dos Dados
-Os dados utilizados neste projeto foram extraídos do conjunto de microdados do Sistema de Informações sobre Nascidos Vivos (SINASC), disponibilizados publicamente pela plataforma Base dos Dados.
+## 2. Fonte dos Dados
+Os dados utilizados neste projeto foram extraídos do conjunto de microdados do Sistema de Informações sobre Nascidos Vivos (SINASC), disponibilizados publicamente pela plataforma [Base dos Dados](https://basedosdados.org/).
 
 Conjunto de Dados: br_ms_sinasc.microdados
-Período Analisado: Nascimentos ocorridos a partir de 01 de janeiro de 2023.
+Período Analisado: Nascimentos ocorridos a partir de 01 de janeiro de 2023 até 01 de novembro de 2023.
 Query de Extração: A query SQL utilizada para a coleta dos dados pode ser encontrada no início do notebook do projeto (Projeto_Peso.ipynb).
 3. Metodologia e Análise
 O projeto seguiu um fluxo de trabalho padrão de ciência de dados, desde a limpeza e tratamento dos dados até a modelagem e interpretação dos resultados.
